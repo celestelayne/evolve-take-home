@@ -46,6 +46,15 @@ const RESERVATION_STATUS_LABELS: Record<ReservationStatus, string> = {
 const getReservationStatusLabel = (booking: Booking): string =>
   RESERVATION_STATUS_LABELS[booking.status];
 
+const getPartyLabel = (booking: Booking): string => {
+  const parts: string[] = [];
+  const { adults, children, infants } = booking.stay;
+  if (adults) parts.push(`${adults} adult${adults === 1 ? '' : 's'}`);
+  if (children) parts.push(`${children} ${children === 1 ? 'child' : 'children'}`);
+  if (infants) parts.push(`${infants} infant${infants === 1 ? '' : 's'}`);
+  return parts.join(', ');
+};
+
 const getReconciliationRows = (
   booking: Booking,
   listing: Listing,
@@ -122,13 +131,8 @@ const getBookingReferenceProps = (booking: Booking) => ({
   bookingId: booking.id,
   dateBooked: booking.dateBooked,
   bookingSite: booking.bookingSite,
-  guest: booking.guest
-    ? {
-        name: booking.guest.name,
-        email: booking.guest.email,
-        phone: booking.guest.phone,
-      }
-    : null,
+  guest: booking.guest ? { name: booking.guest.name } : null,
+  party: booking.guest ? getPartyLabel(booking) : null,
 });
 
 const HERO_BOOKING_ID = '15932931';

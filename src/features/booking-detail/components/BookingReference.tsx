@@ -1,5 +1,5 @@
 import { useId } from 'react';
-import { formatDate } from '../../../lib/dates';
+import { formatFullDate } from '../../../lib/dates';
 
 type Props = {
   bookingId: string;
@@ -7,12 +7,17 @@ type Props = {
   bookingSite?: string | null;
   guest?: {
     name?: string | null;
-    email?: string | null;
-    phone?: string | null;
   } | null;
+  party?: string | null;
 };
 
-export function BookingReference({ bookingId, dateBooked, bookingSite, guest }: Props) {
+export function BookingReference({
+  bookingId,
+  dateBooked,
+  bookingSite,
+  guest,
+  party,
+}: Props) {
   const headingId = useId();
 
   return (
@@ -29,8 +34,8 @@ export function BookingReference({ bookingId, dateBooked, bookingSite, guest }: 
           <dd className="mt-0.5 break-all font-mono text-slate-900">{bookingId}</dd>
         </div>
         <div>
-          <dt className="text-xs text-slate-500">Booked</dt>
-          <dd className="mt-0.5 text-slate-900">{formatDate(dateBooked)}</dd>
+          <dt className="text-xs text-slate-500">Date booked</dt>
+          <dd className="mt-0.5 text-slate-900">{formatFullDate(dateBooked)}</dd>
         </div>
         {bookingSite && (
           <div>
@@ -40,30 +45,9 @@ export function BookingReference({ bookingId, dateBooked, bookingSite, guest }: 
         )}
         {guest?.name && (
           <div>
-            <dt className="text-xs text-slate-500">Guest</dt>
-            <dd className="mt-0.5 text-slate-900">{guest.name}</dd>
-          </div>
-        )}
-        {guest?.email && (
-          <div>
-            <dt className="text-xs text-slate-500">Email</dt>
+            <dt className="text-xs text-slate-500">Guest details</dt>
             <dd className="mt-0.5 text-slate-900">
-              <a className="hover:underline" href={`mailto:${guest.email}`}>
-                {guest.email}
-              </a>
-            </dd>
-          </div>
-        )}
-        {guest?.phone && (
-          <div>
-            <dt className="text-xs text-slate-500">Phone</dt>
-            <dd className="mt-0.5 text-slate-900">
-              <a
-                className="hover:underline"
-                href={`tel:${guest.phone.replace(/\s+/g, '')}`}
-              >
-                {guest.phone}
-              </a>
+              {party && <span className="text-slate-500">{party}</span>}
             </dd>
           </div>
         )}
