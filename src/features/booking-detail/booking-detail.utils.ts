@@ -1,6 +1,6 @@
 import dataset from '../../data/payouts-dataset.json';
 import { formatDate } from '../../lib/dates';
-import type { Booking, LineItem } from './booking-detail.types';
+import type { Booking, LineItem, ReservationStatus } from './booking-detail.types';
 import type { Status } from './components/StatusBadge';
 import type { ReconciliationRow } from './components/Reconciliation';
 import type { NightlyRatesRow } from './components/NightlyRates';
@@ -26,25 +26,6 @@ export const getDisplayStatus = (booking: Booking): Status =>
     ? 'blocked'
     : (booking.payout?.status ?? 'pending');
 
-const getStatusDetail = (booking: Booking): string => {
-  const parts: string[] = [];
-  if (booking.status === 'checked_in') parts.push('Currently checked in');
-  else if (booking.status === 'checked_out') parts.push('Guest checked out');
-  else if (booking.status === 'booked') parts.push('Upcoming stay');
-  else if (booking.status === 'canceled') parts.push('Reservation canceled');
-  else if (booking.status === 'blocked') parts.push('Blocked by owner');
-
-  if (booking.payout?.depositedDate) {
-    parts.push(`Deposited ${formatDate(booking.payout.depositedDate)}`);
-  } else if (
-    booking.payout?.status === 'pending' ||
-    booking.payout?.status === 'scheduled'
-  ) {
-    parts.push(`Deposit expected ${formatDate(booking.payout.expectedDepositDate)}`);
-  }
-  return parts.join(' · ');
-};
-
 const getHeadline = (booking: Booking): string =>
   booking.guest?.name ?? 'Owner-blocked dates';
 
@@ -54,33 +35,44 @@ const getSupporting = (listing: Listing): string =>
 const getStayLabel = (booking: Booking): string =>
   `${formatDate(booking.stay.checkIn)} – ${formatDate(booking.stay.checkOut)} · ${booking.stay.nights} nights`;
 
-const getGuestMeta = (booking: Booking): string => {
-  const parts: string[] = [];
-  const { adults, children, infants } = booking.stay;
-  if (adults) parts.push(`${adults} adult${adults === 1 ? '' : 's'}`);
-  if (children) parts.push(`${children} ${children === 1 ? 'child' : 'children'}`);
-  if (infants) parts.push(`${infants} infant${infants === 1 ? '' : 's'}`);
-  return [booking.bookingSite, parts.join(', ')].filter(Boolean).join(' · ');
+const RESERVATION_STATUS_LABELS: Record<ReservationStatus, string> = {
+  blocked: 'Blocked',
+  booked: 'Booked',
+  checked_in: 'Currently checked in',
+  checked_out: 'Checked out',
+  canceled: 'Canceled',
 };
+
+const getReservationStatusLabel = (booking: Booking): string =>
+  RESERVATION_STATUS_LABELS[booking.status];
 
 const getReconciliationRows = (
   booking: Booking,
   listing: Listing,
 ): ReconciliationRow[] => {
+  const guestTotal = getGuestTotal(booking);
+  const taxTotal = getTaxTotal(booking);
   const managementFee = booking.payout?.managementFee ?? 0;
   const netPayout = booking.payout?.amount ?? 0;
+  const ownerEarnings = guestTotal - taxTotal;
   const feeRatePct = Math.round(listing.managementFeeRate * 100);
   return [
     {
       label: 'Guest paid',
-      amount: getGuestTotal(booking),
+      amount: guestTotal,
       emphasis: 'total',
       detail: 'Base rate, cleaning fee, and taxes',
     },
     {
       label: 'Taxes remitted',
-      amount: -getTaxTotal(booking),
-      detail: 'Collected from guest, sent to tax authorities',
+      amount: -taxTotal,
+      detail: 'Sent to tax authorities',
+    },
+    {
+      label: 'Owner earnings',
+      amount: ownerEarnings,
+      emphasis: 'total',
+      detail: 'Base rate and cleaning, before management fee',
     },
     {
       label: 'Management fee',
@@ -103,12 +95,10 @@ const getNightlyRatesRows = (booking: Booking): NightlyRatesRow[] =>
   }));
 
 const getBookingOrientationProps = (booking: Booking, listing: Listing) => ({
-  status: getDisplayStatus(booking),
-  statusDetail: getStatusDetail(booking),
   headline: getHeadline(booking),
   supporting: getSupporting(listing),
+  statusLabel: getReservationStatusLabel(booking),
   stayLabel: getStayLabel(booking),
-  meta: getGuestMeta(booking),
 });
 
 const getPayoutSummaryProps = (booking: Booking, owner: Owner) => ({
