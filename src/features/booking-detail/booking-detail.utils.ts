@@ -1,9 +1,13 @@
 import dataset from '../../data/payouts-dataset.json';
 import { formatDate } from '../../lib/dates';
+import { formatMoney } from '../../lib/money';
 import type { Booking, LineItem, ReservationStatus } from './booking-detail.types';
 import type { Status } from './components/StatusBadge';
 import type { ReconciliationRow } from './components/Reconciliation';
-import type { NightlyRatesRow } from './components/NightlyRates';
+import type {
+  NightlyRatesPromotion,
+  NightlyRatesRow,
+} from './components/NightlyRates';
 
 type Listing = typeof dataset.listing;
 type Owner = typeof dataset.owner;
@@ -75,7 +79,7 @@ const getReconciliationRows = (
     {
       label: 'Occupancy taxes paid by guest',
       amount: -taxTotal,
-      detail: 'Remitted to tax authorities',
+      detail: 'Remitted directly to tax authorities',
     },
     {
       label: 'Accomodation',
@@ -97,7 +101,7 @@ const getReconciliationRows = (
       amount: -managementFee,
       detail: `${feeRatePct}% of accomodation`,
     },
-    { label: 'Owner payout', amount: netPayout, emphasis: 'total' },
+    { label: 'Your payout', amount: netPayout, emphasis: 'total' },
   ];
 };
 
@@ -108,9 +112,85 @@ const getNightlyRatesRows = (booking: Booking): NightlyRatesRow[] =>
     bookedRate: night.bookedRate,
     adjustments: night.adjustments.map((adj) => ({
       name: adj.name,
+      percent: adj.percent,
       amount: adj.amount,
     })),
   }));
+
+const NUMBER_WORDS = [
+  'zero',
+  'one',
+  'two',
+  'three',
+  'four',
+  'five',
+  'six',
+  'seven',
+  'eight',
+  'nine',
+  'ten',
+];
+
+const numberToWord = (n: number): string => NUMBER_WORDS[n] ?? String(n);
+
+const formatDateList = (dates: string[]): string => {
+  const formatted = dates.map(formatDate);
+  if (formatted.length === 0) return '';
+  if (formatted.length === 1) return formatted[0];
+  if (formatted.length === 2) return `${formatted[0]} and ${formatted[1]}`;
+  return `${formatted.slice(0, -1).join(', ')}, and ${formatted[formatted.length - 1]}`;
+};
+
+const getNightlyRatesSummaryLine = (booking: Booking): string => {
+  const rows = booking.nightlyRates ?? [];
+  const total = rows.reduce((s, n) => s + n.bookedRate, 0);
+  const promoNights = rows.filter((n) => n.adjustments.length > 0).length;
+  const parts = [
+    `${rows.length} night${rows.length === 1 ? '' : 's'} booked`,
+    `${formatMoney(total)} accommodation total`,
+  ];
+  if (promoNights > 0) {
+    parts.push(
+      `Promotion applied to ${promoNights} night${promoNights === 1 ? '' : 's'}`,
+    );
+  }
+  return parts.join(' · ');
+};
+
+const getNightlyRatesPromotions = (booking: Booking): NightlyRatesPromotion[] => {
+  const merchandising = booking.merchandising ?? [];
+  const nightlyRates = booking.nightlyRates ?? [];
+  const totalNights = booking.stay.nights;
+
+  return merchandising.map((m) => {
+    const nights = m.appliesTo.map((date) => {
+      const night = nightlyRates.find((n) => n.date === date);
+      const adj = night?.adjustments.find((a) => a.name === m.name);
+      return {
+        date,
+        percent: adj?.percent ?? 0,
+        baseRate: night?.baseRate ?? 0,
+        amount: adj?.amount ?? 0,
+      };
+    });
+    const totalReduction = nights.reduce((s, n) => s + n.amount, 0);
+
+    const remaining = totalNights - m.appliesTo.length;
+    const appliedFormatted = formatDateList(m.appliesTo);
+    const remainingText =
+      remaining > 0
+        ? ` The other ${numberToWord(remaining)} night${remaining === 1 ? '' : 's'} were booked at their listed rate.`
+        : '';
+
+    return {
+      name: m.name,
+      description: m.description,
+      appliesToLabel: `Applied to ${appliedFormatted}.${remainingText}`,
+      nights,
+      totalReduction,
+    };
+  });
+};
 
 const getBookingOrientationProps = (booking: Booking, listing: Listing) => ({
   headline: getHeadline(booking),
@@ -133,6 +213,8 @@ const getReconciliationProps = (booking: Booking, listing: Listing) => ({
 
 const getNightlyRatesProps = (booking: Booking) => ({
   rows: getNightlyRatesRows(booking),
+  summaryLine: getNightlyRatesSummaryLine(booking),
+  promotions: getNightlyRatesPromotions(booking),
 });
 
 const getBookingReferenceProps = (booking: Booking) => ({
