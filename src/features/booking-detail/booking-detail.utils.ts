@@ -67,28 +67,37 @@ const getReconciliationRows = (
   const feeRatePct = Math.round(listing.managementFeeRate * 100);
   return [
     {
-      label: 'Guest paid',
+      label: 'Guest total',
       amount: guestTotal,
       emphasis: 'total',
-      detail: 'Base rate, cleaning fee, and taxes',
+      detail: 'Base rate, cleaning fee, and occupancy taxes',
     },
     {
-      label: 'Taxes remitted',
+      label: 'Occupancy taxes paid by guest',
       amount: -taxTotal,
-      detail: 'Sent to tax authorities',
+      detail: 'Remitted to tax authorities',
+    },
+    {
+      label: 'Accomodation',
+      amount: getBaseTotal(booking),
+    },
+    {
+      label: 'Cleaning fee',
+      amount: getCleaningFee(booking),
+      detail: 'Passed through to owner',
     },
     {
       label: 'Owner earnings',
       amount: ownerEarnings,
       emphasis: 'total',
-      detail: 'Base rate and cleaning, before management fee',
+      detail: 'Base rate and cleaning fee, before management fee',
     },
     {
-      label: 'Management fee',
+      label: 'Evolve management fee',
       amount: -managementFee,
-      detail: `${feeRatePct}% of base rate`,
+      detail: `${feeRatePct}% of accomodation`,
     },
-    { label: 'Net payout', amount: netPayout, emphasis: 'total' },
+    { label: 'Owner payout', amount: netPayout, emphasis: 'total' },
   ];
 };
 

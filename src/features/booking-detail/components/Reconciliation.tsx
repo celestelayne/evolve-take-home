@@ -21,7 +21,7 @@ export function Reconciliation({ rows }: Props) {
         id={headingId}
         className="mb-3 text-xs font-medium uppercase tracking-wide text-slate-500"
       >
-        Reconciliation
+        How your payout is calculated
       </h2>
       <dl className="divide-y divide-slate-200 overflow-hidden rounded-lg border border-slate-200 bg-white">
         {rows.map((row, i) => {
