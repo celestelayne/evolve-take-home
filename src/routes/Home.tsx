@@ -2,9 +2,9 @@ import { Link } from 'react-router-dom';
 
 const CONCEPTS = [
   { path: '/answer', label: 'Answer' },
-  { path: '/flow', label: 'Flow' },
-  { path: '/statement', label: 'Statement' },
-  { path: '/guided', label: 'Guided' },
+  // { path: '/flow', label: 'Flow' },
+  // { path: '/statement', label: 'Statement' },
+  // { path: '/guided', label: 'Guided' },
 ];
 
 function Home() {

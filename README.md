@@ -2,13 +2,16 @@
 
 | Overview | Detail |
 | :---        | :---        |
-| Live Prototype | [evolve-take-home.vercel.app](https://evolve-take-home.vercel.app/) |
+| Live Prototype | [https://evolve-take-home.vercel.app/](https://evolve-take-home.vercel.app/) |
 | Stack | React + TypeScript + Vite + Tailwind, deployed to Vercel |
 | Scenario | Jordan Avery viewing an in-flight booking for South Congress Loft. |
 
 ## Key Decisions
 
-<!-- Add decisions as they are made during the design process. -->
+1. Make the payout the dominant financial answer.
+2. Make the relationship between the guest total and owner payout explicit.
+3. Separate confirmation from investigation by placing nightly rate details lower in the hierarchy.
+4. Only explain what the data actually supports
 
 ## Dataset Assumptions
 
@@ -93,5 +96,3 @@ src/
 ├── App.tsx
 └── index.css
 ```
-
-## What I'd Explore Next
