@@ -178,6 +178,18 @@
           "bookedRate": 104.67
         }
       ],
+      "merchandising": [
+        {
+          "id": "promo_spring_15",
+          "type": "promotion",
+          "name": "Spring promotion",
+          "description": "15% off select nights",
+          "appliesTo": [
+            "2025-11-25",
+            "2025-11-26"
+          ]
+        }
+      ],
       "payout": {
         "amount": 587.46,
         "managementFee": 78.96,
@@ -277,6 +289,7 @@
           "bookedRate": 134.15
         }
       ],
+      "merchandising": [],
       "payout": {
         "amount": 912.78,
         "managementFee": 136.37,
@@ -370,6 +383,7 @@
           "bookedRate": 121.04
         }
       ],
+      "merchandising": [],
       "payout": {
         "amount": 757.13,
         "managementFee": 108.91,
@@ -490,6 +504,19 @@
           "bookedRate": 122.07
         }
       ],
+      "merchandising": [
+        {
+          "id": "promo_midweek_10",
+          "type": "promotion",
+          "name": "Mid-week discount",
+          "description": "10% off select nights",
+          "appliesTo": [
+            "2025-12-27",
+            "2025-12-28",
+            "2025-12-29"
+          ]
+        }
+      ],
       "payout": {
         "amount": 867.66,
         "managementFee": 128.41,
@@ -583,6 +610,7 @@
           "bookedRate": 91.58
         }
       ],
+      "merchandising": [],
       "payout": {
         "amount": 608.84,
         "managementFee": 82.74,
@@ -657,6 +685,17 @@
           "baseRate": 106.94,
           "adjustments": [],
           "bookedRate": 106.94
+        }
+      ],
+      "merchandising": [
+        {
+          "id": "promo_offpeak_8",
+          "type": "promotion",
+          "name": "Off-peak special",
+          "description": "8% off select nights",
+          "appliesTo": [
+            "2026-02-13"
+          ]
         }
       ],
       "payout": {
@@ -734,6 +773,7 @@
           "bookedRate": 103.53
         }
       ],
+      "merchandising": [],
       "payout": {
         "amount": 410.75,
         "managementFee": 47.78,
@@ -833,6 +873,7 @@
           "bookedRate": 105.32
         }
       ],
+      "merchandising": [],
       "payout": {
         "amount": 760.77,
         "managementFee": 109.55,
@@ -914,6 +955,7 @@
           "bookedRate": 171.96
         }
       ],
+      "merchandising": [],
       "payout": {
         "amount": 745.17,
         "managementFee": 106.79,
@@ -1034,6 +1076,17 @@
           "bookedRate": 158.4
         }
       ],
+      "merchandising": [
+        {
+          "id": "promo_last_minute_12",
+          "type": "promotion",
+          "name": "Last-minute deal",
+          "description": "12% off select nights",
+          "appliesTo": [
+            "2026-03-14"
+          ]
+        }
+      ],
       "payout": {
         "amount": 563.81,
         "managementFee": 74.79,
@@ -1133,6 +1186,7 @@
           "bookedRate": 190.36
         }
       ],
+      "merchandising": [],
       "payout": {
         "amount": 1266.56,
         "managementFee": 198.8,
@@ -1226,6 +1280,7 @@
           "bookedRate": 169.42
         }
       ],
+      "merchandising": [],
       "payout": {
         "amount": 972.51,
         "managementFee": 146.91,
@@ -1302,6 +1357,17 @@
           "bookedRate": 175.5
         }
       ],
+      "merchandising": [
+        {
+          "id": "promo_extended_stay_10",
+          "type": "promotion",
+          "name": "Extended-stay discount",
+          "description": "10% off select nights",
+          "appliesTo": [
+            "2026-03-27"
+          ]
+        }
+      ],
       "payout": {
         "amount": 0,
         "managementFee": 0,
@@ -1371,6 +1437,7 @@
           "bookedRate": 173.52
         }
       ],
+      "merchandising": [],
       "payout": {
         "amount": 448.99,
         "managementFee": 54.53,
@@ -1465,6 +1532,7 @@
           "bookedRate": 131.33
         }
       ],
+      "merchandising": [],
       "payout": {
         "amount": 485.38,
         "managementFee": 60.95,
@@ -1570,6 +1638,18 @@
           "baseRate": 133.61,
           "adjustments": [],
           "bookedRate": 133.61
+        }
+      ],
+      "merchandising": [
+        {
+          "id": "promo_spring_15",
+          "type": "promotion",
+          "name": "Spring promotion",
+          "description": "15% off select nights",
+          "appliesTo": [
+            "2026-04-15",
+            "2026-04-16"
+          ]
         }
       ],
       "payout": {
@@ -1678,6 +1758,7 @@
           "bookedRate": 127.45
         }
       ],
+      "merchandising": [],
       "payout": {
         "amount": 690.33,
         "managementFee": 97.12,
@@ -1759,6 +1840,7 @@
           "bookedRate": 114.81
         }
       ],
+      "merchandising": [],
       "payout": {
         "amount": 552.09,
         "managementFee": 72.72,
@@ -1879,6 +1961,19 @@
           "bookedRate": 122.16
         }
       ],
+      "merchandising": [
+        {
+          "id": "promo_midweek_10",
+          "type": "promotion",
+          "name": "Mid-week discount",
+          "description": "10% off select nights",
+          "appliesTo": [
+            "2026-05-07",
+            "2026-05-08",
+            "2026-05-09"
+          ]
+        }
+      ],
       "payout": {
         "amount": 880.06,
         "managementFee": 130.6,
@@ -1967,6 +2062,7 @@
           "bookedRate": 121.61
         }
       ],
+      "merchandising": [],
       "payout": {
         "amount": 353.87,
         "managementFee": 37.74,
@@ -2072,6 +2168,18 @@
           "baseRate": 129.14,
           "adjustments": [],
           "bookedRate": 129.14
+        }
+      ],
+      "merchandising": [
+        {
+          "id": "promo_spring_15",
+          "type": "promotion",
+          "name": "Spring promotion",
+          "description": "15% off select nights",
+          "appliesTo": [
+            "2026-05-16",
+            "2026-05-17"
+          ]
         }
       ],
       "payout": {
@@ -2187,6 +2295,17 @@
           "bookedRate": 136.72
         }
       ],
+      "merchandising": [
+        {
+          "id": "promo_offpeak_8",
+          "type": "promotion",
+          "name": "Off-peak special",
+          "description": "8% off select nights",
+          "appliesTo": [
+            "2026-05-27"
+          ]
+        }
+      ],
       "payout": {
         "amount": 738.33,
         "managementFee": 105.59,
@@ -2286,6 +2405,7 @@
           "bookedRate": 132.79
         }
       ],
+      "merchandising": [],
       "payout": {
         "amount": 949.87,
         "managementFee": 142.92,
@@ -2399,6 +2519,7 @@
           "bookedRate": 131.41
         }
       ],
+      "merchandising": [],
       "payout": {
         "amount": 489.7,
         "managementFee": 61.71,
@@ -2485,6 +2606,17 @@
             }
           ],
           "bookedRate": 145.2
+        }
+      ],
+      "merchandising": [
+        {
+          "id": "promo_last_minute_12",
+          "type": "promotion",
+          "name": "Last-minute deal",
+          "description": "12% off select nights",
+          "appliesTo": [
+            "2026-07-11"
+          ]
         }
       ],
       "payout": {
@@ -2586,6 +2718,7 @@
           "bookedRate": 135.44
         }
       ],
+      "merchandising": [],
       "payout": {
         "amount": 952.12,
         "managementFee": 143.32,
@@ -2679,6 +2812,7 @@
           "bookedRate": 163.99
         }
       ],
+      "merchandising": [],
       "payout": {
         "amount": 921.14,
         "managementFee": 137.85,
@@ -2768,6 +2902,18 @@
           "bookedRate": 126
         }
       ],
+      "merchandising": [
+        {
+          "id": "promo_extended_stay_10",
+          "type": "promotion",
+          "name": "Extended-stay discount",
+          "description": "10% off select nights",
+          "appliesTo": [
+            "2026-08-03",
+            "2026-08-04"
+          ]
+        }
+      ],
       "payout": {
         "amount": 479.63,
         "managementFee": 59.93,
@@ -2849,6 +2995,7 @@
           "bookedRate": 112.55
         }
       ],
+      "merchandising": [],
       "payout": {
         "amount": 550.17,
         "managementFee": 72.38,
