@@ -1,6 +1,6 @@
 {
   "meta": {
-    "description": "Synthetic dataset for Senior Design Engineer take-home exercise. All data is fictional \u2014 names, contact info, IDs, and listing are not real.",
+    "description": "Synthetic dataset for Senior Design Engineer take-home exercise. All data is fictional — names, contact info, IDs, and listing are not real.",
     "generatedOn": "2026-05-17",
     "todayForExercise": "2026-05-17",
     "currencyCode": "USD",
@@ -15,7 +15,7 @@
       "lastFour": "4218"
     },
     "plan": "Plus",
-    "planDescription": "Plus tier \u2014 15% management fee on base rate; cleaning fee passes through to owner."
+    "planDescription": "Plus tier — 15% management fee on base rate; cleaning fee passes through to owner."
   },
   "listing": {
     "id": "547552",
@@ -27,7 +27,7 @@
     "bathrooms": 1,
     "sleeps": 4,
     "managementFeeRate": 0.15,
-    "cleaningFee": 140.0
+    "cleaningFee": 140
   },
   "taxes": [
     {
@@ -46,7 +46,7 @@
       "appliesTo": "base + cleaning"
     }
   ],
-  "payoutTimingNote": "Payouts typically appear in the owner's bank account 5\u20139 business days after a guest checks in. Transaction is processed ~2 business days after check-in.",
+  "payoutTimingNote": "Payouts typically appear in the owner's bank account 5–9 business days after a guest checks in. Transaction is processed ~2 business days after check-in.",
   "bookings": [
     {
       "id": "a0APl00000LT0TPBMAB",
@@ -113,7 +113,7 @@
         },
         {
           "description": "Cleaning Fee",
-          "amount": 140.0,
+          "amount": 140,
           "type": "fee"
         },
         {
@@ -130,6 +130,52 @@
           "description": "Travis County Venue Project Tax",
           "amount": 13.33,
           "type": "tax"
+        }
+      ],
+      "nightlyRates": [
+        {
+          "date": "2025-11-25",
+          "baseRate": 130,
+          "adjustments": [
+            {
+              "type": "promotion",
+              "name": "Spring promotion",
+              "percent": -15,
+              "amount": -19.5
+            }
+          ],
+          "bookedRate": 110.5
+        },
+        {
+          "date": "2025-11-26",
+          "baseRate": 125,
+          "adjustments": [
+            {
+              "type": "promotion",
+              "name": "Spring promotion",
+              "percent": -15,
+              "amount": -18.75
+            }
+          ],
+          "bookedRate": 106.25
+        },
+        {
+          "date": "2025-11-27",
+          "baseRate": 105,
+          "adjustments": [],
+          "bookedRate": 105
+        },
+        {
+          "date": "2025-11-28",
+          "baseRate": 100,
+          "adjustments": [],
+          "bookedRate": 100
+        },
+        {
+          "date": "2025-11-29",
+          "baseRate": 104.67,
+          "adjustments": [],
+          "bookedRate": 104.67
         }
       ],
       "payout": {
@@ -168,7 +214,7 @@
         },
         {
           "description": "Cleaning Fee",
-          "amount": 140.0,
+          "amount": 140,
           "type": "fee"
         },
         {
@@ -185,6 +231,50 @@
           "description": "Travis County Venue Project Tax",
           "amount": 20.98,
           "type": "tax"
+        }
+      ],
+      "nightlyRates": [
+        {
+          "date": "2025-12-01",
+          "baseRate": 135,
+          "adjustments": [],
+          "bookedRate": 135
+        },
+        {
+          "date": "2025-12-02",
+          "baseRate": 130,
+          "adjustments": [],
+          "bookedRate": 130
+        },
+        {
+          "date": "2025-12-03",
+          "baseRate": 130,
+          "adjustments": [],
+          "bookedRate": 130
+        },
+        {
+          "date": "2025-12-04",
+          "baseRate": 125,
+          "adjustments": [],
+          "bookedRate": 125
+        },
+        {
+          "date": "2025-12-05",
+          "baseRate": 125,
+          "adjustments": [],
+          "bookedRate": 125
+        },
+        {
+          "date": "2025-12-06",
+          "baseRate": 130,
+          "adjustments": [],
+          "bookedRate": 130
+        },
+        {
+          "date": "2025-12-07",
+          "baseRate": 134.15,
+          "adjustments": [],
+          "bookedRate": 134.15
         }
       ],
       "payout": {
@@ -223,7 +313,7 @@
         },
         {
           "description": "Cleaning Fee",
-          "amount": 140.0,
+          "amount": 140,
           "type": "fee"
         },
         {
@@ -240,6 +330,44 @@
           "description": "Travis County Venue Project Tax",
           "amount": 17.32,
           "type": "tax"
+        }
+      ],
+      "nightlyRates": [
+        {
+          "date": "2025-12-20",
+          "baseRate": 130,
+          "adjustments": [],
+          "bookedRate": 130
+        },
+        {
+          "date": "2025-12-21",
+          "baseRate": 125,
+          "adjustments": [],
+          "bookedRate": 125
+        },
+        {
+          "date": "2025-12-22",
+          "baseRate": 120,
+          "adjustments": [],
+          "bookedRate": 120
+        },
+        {
+          "date": "2025-12-23",
+          "baseRate": 115,
+          "adjustments": [],
+          "bookedRate": 115
+        },
+        {
+          "date": "2025-12-24",
+          "baseRate": 115,
+          "adjustments": [],
+          "bookedRate": 115
+        },
+        {
+          "date": "2025-12-25",
+          "baseRate": 121.04,
+          "adjustments": [],
+          "bookedRate": 121.04
         }
       ],
       "payout": {
@@ -278,7 +406,7 @@
         },
         {
           "description": "Cleaning Fee",
-          "amount": 140.0,
+          "amount": 140,
           "type": "fee"
         },
         {
@@ -295,6 +423,71 @@
           "description": "Travis County Venue Project Tax",
           "amount": 19.92,
           "type": "tax"
+        }
+      ],
+      "nightlyRates": [
+        {
+          "date": "2025-12-26",
+          "baseRate": 130,
+          "adjustments": [],
+          "bookedRate": 130
+        },
+        {
+          "date": "2025-12-27",
+          "baseRate": 135,
+          "adjustments": [
+            {
+              "type": "promotion",
+              "name": "Mid-week discount",
+              "percent": -10,
+              "amount": -13.5
+            }
+          ],
+          "bookedRate": 121.5
+        },
+        {
+          "date": "2025-12-28",
+          "baseRate": 140,
+          "adjustments": [
+            {
+              "type": "promotion",
+              "name": "Mid-week discount",
+              "percent": -10,
+              "amount": -14
+            }
+          ],
+          "bookedRate": 126
+        },
+        {
+          "date": "2025-12-29",
+          "baseRate": 135,
+          "adjustments": [
+            {
+              "type": "promotion",
+              "name": "Mid-week discount",
+              "percent": -10,
+              "amount": -13.5
+            }
+          ],
+          "bookedRate": 121.5
+        },
+        {
+          "date": "2025-12-30",
+          "baseRate": 115,
+          "adjustments": [],
+          "bookedRate": 115
+        },
+        {
+          "date": "2025-12-31",
+          "baseRate": 120,
+          "adjustments": [],
+          "bookedRate": 120
+        },
+        {
+          "date": "2026-01-01",
+          "baseRate": 122.07,
+          "adjustments": [],
+          "bookedRate": 122.07
         }
       ],
       "payout": {
@@ -333,7 +526,7 @@
         },
         {
           "description": "Cleaning Fee",
-          "amount": 140.0,
+          "amount": 140,
           "type": "fee"
         },
         {
@@ -350,6 +543,44 @@
           "description": "Travis County Venue Project Tax",
           "amount": 13.83,
           "type": "tax"
+        }
+      ],
+      "nightlyRates": [
+        {
+          "date": "2026-01-26",
+          "baseRate": 95,
+          "adjustments": [],
+          "bookedRate": 95
+        },
+        {
+          "date": "2026-01-27",
+          "baseRate": 95,
+          "adjustments": [],
+          "bookedRate": 95
+        },
+        {
+          "date": "2026-01-28",
+          "baseRate": 90,
+          "adjustments": [],
+          "bookedRate": 90
+        },
+        {
+          "date": "2026-01-29",
+          "baseRate": 90,
+          "adjustments": [],
+          "bookedRate": 90
+        },
+        {
+          "date": "2026-01-30",
+          "baseRate": 90,
+          "adjustments": [],
+          "bookedRate": 90
+        },
+        {
+          "date": "2026-01-31",
+          "baseRate": 91.58,
+          "adjustments": [],
+          "bookedRate": 91.58
         }
       ],
       "payout": {
@@ -388,7 +619,7 @@
         },
         {
           "description": "Cleaning Fee",
-          "amount": 140.0,
+          "amount": 140,
           "type": "fee"
         },
         {
@@ -405,6 +636,27 @@
           "description": "Travis County Venue Project Tax",
           "amount": 7.24,
           "type": "tax"
+        }
+      ],
+      "nightlyRates": [
+        {
+          "date": "2026-02-13",
+          "baseRate": 125,
+          "adjustments": [
+            {
+              "type": "promotion",
+              "name": "Off-peak special",
+              "percent": -8,
+              "amount": -10
+            }
+          ],
+          "bookedRate": 115
+        },
+        {
+          "date": "2026-02-14",
+          "baseRate": 106.94,
+          "adjustments": [],
+          "bookedRate": 106.94
         }
       ],
       "payout": {
@@ -443,7 +695,7 @@
         },
         {
           "description": "Cleaning Fee",
-          "amount": 140.0,
+          "amount": 140,
           "type": "fee"
         },
         {
@@ -460,6 +712,26 @@
           "description": "Travis County Venue Project Tax",
           "amount": 9.17,
           "type": "tax"
+        }
+      ],
+      "nightlyRates": [
+        {
+          "date": "2026-02-20",
+          "baseRate": 110,
+          "adjustments": [],
+          "bookedRate": 110
+        },
+        {
+          "date": "2026-02-21",
+          "baseRate": 105,
+          "adjustments": [],
+          "bookedRate": 105
+        },
+        {
+          "date": "2026-02-22",
+          "baseRate": 103.53,
+          "adjustments": [],
+          "bookedRate": 103.53
         }
       ],
       "payout": {
@@ -498,7 +770,7 @@
         },
         {
           "description": "Cleaning Fee",
-          "amount": 140.0,
+          "amount": 140,
           "type": "fee"
         },
         {
@@ -515,6 +787,50 @@
           "description": "Travis County Venue Project Tax",
           "amount": 17.41,
           "type": "tax"
+        }
+      ],
+      "nightlyRates": [
+        {
+          "date": "2026-02-23",
+          "baseRate": 110,
+          "adjustments": [],
+          "bookedRate": 110
+        },
+        {
+          "date": "2026-02-24",
+          "baseRate": 105,
+          "adjustments": [],
+          "bookedRate": 105
+        },
+        {
+          "date": "2026-02-25",
+          "baseRate": 105,
+          "adjustments": [],
+          "bookedRate": 105
+        },
+        {
+          "date": "2026-02-26",
+          "baseRate": 100,
+          "adjustments": [],
+          "bookedRate": 100
+        },
+        {
+          "date": "2026-02-27",
+          "baseRate": 100,
+          "adjustments": [],
+          "bookedRate": 100
+        },
+        {
+          "date": "2026-02-28",
+          "baseRate": 105,
+          "adjustments": [],
+          "bookedRate": 105
+        },
+        {
+          "date": "2026-03-01",
+          "baseRate": 105.32,
+          "adjustments": [],
+          "bookedRate": 105.32
         }
       ],
       "payout": {
@@ -553,7 +869,7 @@
         },
         {
           "description": "Cleaning Fee",
-          "amount": 140.0,
+          "amount": 140,
           "type": "fee"
         },
         {
@@ -570,6 +886,32 @@
           "description": "Travis County Venue Project Tax",
           "amount": 17.04,
           "type": "tax"
+        }
+      ],
+      "nightlyRates": [
+        {
+          "date": "2026-03-05",
+          "baseRate": 185,
+          "adjustments": [],
+          "bookedRate": 185
+        },
+        {
+          "date": "2026-03-06",
+          "baseRate": 175,
+          "adjustments": [],
+          "bookedRate": 175
+        },
+        {
+          "date": "2026-03-07",
+          "baseRate": 180,
+          "adjustments": [],
+          "bookedRate": 180
+        },
+        {
+          "date": "2026-03-08",
+          "baseRate": 171.96,
+          "adjustments": [],
+          "bookedRate": 171.96
         }
       ],
       "payout": {
@@ -646,7 +988,7 @@
         },
         {
           "description": "Cleaning Fee",
-          "amount": 140.0,
+          "amount": 140,
           "type": "fee"
         },
         {
@@ -663,6 +1005,33 @@
           "description": "Travis County Venue Project Tax",
           "amount": 12.77,
           "type": "tax"
+        }
+      ],
+      "nightlyRates": [
+        {
+          "date": "2026-03-12",
+          "baseRate": 175,
+          "adjustments": [],
+          "bookedRate": 175
+        },
+        {
+          "date": "2026-03-13",
+          "baseRate": 165.2,
+          "adjustments": [],
+          "bookedRate": 165.2
+        },
+        {
+          "date": "2026-03-14",
+          "baseRate": 180,
+          "adjustments": [
+            {
+              "type": "promotion",
+              "name": "Last-minute deal",
+              "percent": -12,
+              "amount": -21.6
+            }
+          ],
+          "bookedRate": 158.4
         }
       ],
       "payout": {
@@ -701,7 +1070,7 @@
         },
         {
           "description": "Cleaning Fee",
-          "amount": 140.0,
+          "amount": 140,
           "type": "fee"
         },
         {
@@ -718,6 +1087,50 @@
           "description": "Travis County Venue Project Tax",
           "amount": 29.31,
           "type": "tax"
+        }
+      ],
+      "nightlyRates": [
+        {
+          "date": "2026-03-15",
+          "baseRate": 200,
+          "adjustments": [],
+          "bookedRate": 200
+        },
+        {
+          "date": "2026-03-16",
+          "baseRate": 190,
+          "adjustments": [],
+          "bookedRate": 190
+        },
+        {
+          "date": "2026-03-17",
+          "baseRate": 195,
+          "adjustments": [],
+          "bookedRate": 195
+        },
+        {
+          "date": "2026-03-18",
+          "baseRate": 185,
+          "adjustments": [],
+          "bookedRate": 185
+        },
+        {
+          "date": "2026-03-19",
+          "baseRate": 180,
+          "adjustments": [],
+          "bookedRate": 180
+        },
+        {
+          "date": "2026-03-20",
+          "baseRate": 185,
+          "adjustments": [],
+          "bookedRate": 185
+        },
+        {
+          "date": "2026-03-21",
+          "baseRate": 190.36,
+          "adjustments": [],
+          "bookedRate": 190.36
         }
       ],
       "payout": {
@@ -756,7 +1169,7 @@
         },
         {
           "description": "Cleaning Fee",
-          "amount": 140.0,
+          "amount": 140,
           "type": "fee"
         },
         {
@@ -773,6 +1186,44 @@
           "description": "Travis County Venue Project Tax",
           "amount": 22.39,
           "type": "tax"
+        }
+      ],
+      "nightlyRates": [
+        {
+          "date": "2026-03-22",
+          "baseRate": 175,
+          "adjustments": [],
+          "bookedRate": 175
+        },
+        {
+          "date": "2026-03-23",
+          "baseRate": 165,
+          "adjustments": [],
+          "bookedRate": 165
+        },
+        {
+          "date": "2026-03-24",
+          "baseRate": 160,
+          "adjustments": [],
+          "bookedRate": 160
+        },
+        {
+          "date": "2026-03-25",
+          "baseRate": 155,
+          "adjustments": [],
+          "bookedRate": 155
+        },
+        {
+          "date": "2026-03-26",
+          "baseRate": 155,
+          "adjustments": [],
+          "bookedRate": 155
+        },
+        {
+          "date": "2026-03-27",
+          "baseRate": 169.42,
+          "adjustments": [],
+          "bookedRate": 169.42
         }
       ],
       "payout": {
@@ -811,7 +1262,7 @@
         },
         {
           "description": "Cleaning Fee",
-          "amount": 140.0,
+          "amount": 140,
           "type": "fee"
         },
         {
@@ -830,9 +1281,30 @@
           "type": "tax"
         }
       ],
+      "nightlyRates": [
+        {
+          "date": "2026-03-26",
+          "baseRate": 188.65,
+          "adjustments": [],
+          "bookedRate": 188.65
+        },
+        {
+          "date": "2026-03-27",
+          "baseRate": 195,
+          "adjustments": [
+            {
+              "type": "promotion",
+              "name": "Extended-stay discount",
+              "percent": -10,
+              "amount": -19.5
+            }
+          ],
+          "bookedRate": 175.5
+        }
+      ],
       "payout": {
-        "amount": 0.0,
-        "managementFee": 0.0,
+        "amount": 0,
+        "managementFee": 0,
         "status": "canceled",
         "expectedDepositDate": "2026-03-30",
         "depositedDate": null
@@ -866,7 +1338,7 @@
         },
         {
           "description": "Cleaning Fee",
-          "amount": 140.0,
+          "amount": 140,
           "type": "fee"
         },
         {
@@ -883,6 +1355,20 @@
           "description": "Travis County Venue Project Tax",
           "amount": 10.07,
           "type": "tax"
+        }
+      ],
+      "nightlyRates": [
+        {
+          "date": "2026-03-28",
+          "baseRate": 190,
+          "adjustments": [],
+          "bookedRate": 190
+        },
+        {
+          "date": "2026-03-29",
+          "baseRate": 173.52,
+          "adjustments": [],
+          "bookedRate": 173.52
         }
       ],
       "payout": {
@@ -940,7 +1426,7 @@
         },
         {
           "description": "Cleaning Fee",
-          "amount": 140.0,
+          "amount": 140,
           "type": "fee"
         },
         {
@@ -957,6 +1443,26 @@
           "description": "Travis County Venue Project Tax",
           "amount": 10.93,
           "type": "tax"
+        }
+      ],
+      "nightlyRates": [
+        {
+          "date": "2026-04-08",
+          "baseRate": 140,
+          "adjustments": [],
+          "bookedRate": 140
+        },
+        {
+          "date": "2026-04-09",
+          "baseRate": 135,
+          "adjustments": [],
+          "bookedRate": 135
+        },
+        {
+          "date": "2026-04-10",
+          "baseRate": 131.33,
+          "adjustments": [],
+          "bookedRate": 131.33
         }
       ],
       "payout": {
@@ -995,7 +1501,7 @@
         },
         {
           "description": "Cleaning Fee",
-          "amount": 140.0,
+          "amount": 140,
           "type": "fee"
         },
         {
@@ -1012,6 +1518,58 @@
           "description": "Travis County Venue Project Tax",
           "amount": 18.33,
           "type": "tax"
+        }
+      ],
+      "nightlyRates": [
+        {
+          "date": "2026-04-15",
+          "baseRate": 160,
+          "adjustments": [
+            {
+              "type": "promotion",
+              "name": "Spring promotion",
+              "percent": -15,
+              "amount": -24
+            }
+          ],
+          "bookedRate": 136
+        },
+        {
+          "date": "2026-04-16",
+          "baseRate": 155,
+          "adjustments": [
+            {
+              "type": "promotion",
+              "name": "Spring promotion",
+              "percent": -15,
+              "amount": -23.25
+            }
+          ],
+          "bookedRate": 131.75
+        },
+        {
+          "date": "2026-04-17",
+          "baseRate": 125,
+          "adjustments": [],
+          "bookedRate": 125
+        },
+        {
+          "date": "2026-04-18",
+          "baseRate": 125,
+          "adjustments": [],
+          "bookedRate": 125
+        },
+        {
+          "date": "2026-04-19",
+          "baseRate": 125,
+          "adjustments": [],
+          "bookedRate": 125
+        },
+        {
+          "date": "2026-04-20",
+          "baseRate": 133.61,
+          "adjustments": [],
+          "bookedRate": 133.61
         }
       ],
       "payout": {
@@ -1069,7 +1627,7 @@
         },
         {
           "description": "Cleaning Fee",
-          "amount": 140.0,
+          "amount": 140,
           "type": "fee"
         },
         {
@@ -1086,6 +1644,38 @@
           "description": "Travis County Venue Project Tax",
           "amount": 15.75,
           "type": "tax"
+        }
+      ],
+      "nightlyRates": [
+        {
+          "date": "2026-04-23",
+          "baseRate": 135,
+          "adjustments": [],
+          "bookedRate": 135
+        },
+        {
+          "date": "2026-04-24",
+          "baseRate": 130,
+          "adjustments": [],
+          "bookedRate": 130
+        },
+        {
+          "date": "2026-04-25",
+          "baseRate": 130,
+          "adjustments": [],
+          "bookedRate": 130
+        },
+        {
+          "date": "2026-04-26",
+          "baseRate": 125,
+          "adjustments": [],
+          "bookedRate": 125
+        },
+        {
+          "date": "2026-04-27",
+          "baseRate": 127.45,
+          "adjustments": [],
+          "bookedRate": 127.45
         }
       ],
       "payout": {
@@ -1124,7 +1714,7 @@
         },
         {
           "description": "Cleaning Fee",
-          "amount": 140.0,
+          "amount": 140,
           "type": "fee"
         },
         {
@@ -1141,6 +1731,32 @@
           "description": "Travis County Venue Project Tax",
           "amount": 12.5,
           "type": "tax"
+        }
+      ],
+      "nightlyRates": [
+        {
+          "date": "2026-05-01",
+          "baseRate": 125,
+          "adjustments": [],
+          "bookedRate": 125
+        },
+        {
+          "date": "2026-05-02",
+          "baseRate": 120,
+          "adjustments": [],
+          "bookedRate": 120
+        },
+        {
+          "date": "2026-05-03",
+          "baseRate": 125,
+          "adjustments": [],
+          "bookedRate": 125
+        },
+        {
+          "date": "2026-05-04",
+          "baseRate": 114.81,
+          "adjustments": [],
+          "bookedRate": 114.81
         }
       ],
       "payout": {
@@ -1179,7 +1795,7 @@
         },
         {
           "description": "Cleaning Fee",
-          "amount": 140.0,
+          "amount": 140,
           "type": "fee"
         },
         {
@@ -1196,6 +1812,71 @@
           "description": "Travis County Venue Project Tax",
           "amount": 20.21,
           "type": "tax"
+        }
+      ],
+      "nightlyRates": [
+        {
+          "date": "2026-05-06",
+          "baseRate": 130,
+          "adjustments": [],
+          "bookedRate": 130
+        },
+        {
+          "date": "2026-05-07",
+          "baseRate": 140,
+          "adjustments": [
+            {
+              "type": "promotion",
+              "name": "Mid-week discount",
+              "percent": -10,
+              "amount": -14
+            }
+          ],
+          "bookedRate": 126
+        },
+        {
+          "date": "2026-05-08",
+          "baseRate": 140,
+          "adjustments": [
+            {
+              "type": "promotion",
+              "name": "Mid-week discount",
+              "percent": -10,
+              "amount": -14
+            }
+          ],
+          "bookedRate": 126
+        },
+        {
+          "date": "2026-05-09",
+          "baseRate": 135,
+          "adjustments": [
+            {
+              "type": "promotion",
+              "name": "Mid-week discount",
+              "percent": -10,
+              "amount": -13.5
+            }
+          ],
+          "bookedRate": 121.5
+        },
+        {
+          "date": "2026-05-10",
+          "baseRate": 120,
+          "adjustments": [],
+          "bookedRate": 120
+        },
+        {
+          "date": "2026-05-11",
+          "baseRate": 125,
+          "adjustments": [],
+          "bookedRate": 125
+        },
+        {
+          "date": "2026-05-12",
+          "baseRate": 122.16,
+          "adjustments": [],
+          "bookedRate": 122.16
         }
       ],
       "payout": {
@@ -1253,7 +1934,7 @@
         },
         {
           "description": "Cleaning Fee",
-          "amount": 140.0,
+          "amount": 140,
           "type": "fee"
         },
         {
@@ -1270,6 +1951,20 @@
           "description": "Travis County Venue Project Tax",
           "amount": 7.83,
           "type": "tax"
+        }
+      ],
+      "nightlyRates": [
+        {
+          "date": "2026-05-14",
+          "baseRate": 130,
+          "adjustments": [],
+          "bookedRate": 130
+        },
+        {
+          "date": "2026-05-15",
+          "baseRate": 121.61,
+          "adjustments": [],
+          "bookedRate": 121.61
         }
       ],
       "payout": {
@@ -1308,7 +2003,7 @@
         },
         {
           "description": "Cleaning Fee",
-          "amount": 140.0,
+          "amount": 140,
           "type": "fee"
         },
         {
@@ -1325,6 +2020,58 @@
           "description": "Travis County Venue Project Tax",
           "amount": 17.44,
           "type": "tax"
+        }
+      ],
+      "nightlyRates": [
+        {
+          "date": "2026-05-16",
+          "baseRate": 145,
+          "adjustments": [
+            {
+              "type": "promotion",
+              "name": "Spring promotion",
+              "percent": -15,
+              "amount": -21.75
+            }
+          ],
+          "bookedRate": 123.25
+        },
+        {
+          "date": "2026-05-17",
+          "baseRate": 135,
+          "adjustments": [
+            {
+              "type": "promotion",
+              "name": "Spring promotion",
+              "percent": -15,
+              "amount": -20.25
+            }
+          ],
+          "bookedRate": 114.75
+        },
+        {
+          "date": "2026-05-18",
+          "baseRate": 125,
+          "adjustments": [],
+          "bookedRate": 125
+        },
+        {
+          "date": "2026-05-19",
+          "baseRate": 120,
+          "adjustments": [],
+          "bookedRate": 120
+        },
+        {
+          "date": "2026-05-20",
+          "baseRate": 120,
+          "adjustments": [],
+          "bookedRate": 120
+        },
+        {
+          "date": "2026-05-21",
+          "baseRate": 129.14,
+          "adjustments": [],
+          "bookedRate": 129.14
         }
       ],
       "payout": {
@@ -1382,7 +2129,7 @@
         },
         {
           "description": "Cleaning Fee",
-          "amount": 140.0,
+          "amount": 140,
           "type": "fee"
         },
         {
@@ -1399,6 +2146,45 @@
           "description": "Travis County Venue Project Tax",
           "amount": 16.88,
           "type": "tax"
+        }
+      ],
+      "nightlyRates": [
+        {
+          "date": "2026-05-27",
+          "baseRate": 160,
+          "adjustments": [
+            {
+              "type": "promotion",
+              "name": "Off-peak special",
+              "percent": -8,
+              "amount": -12.8
+            }
+          ],
+          "bookedRate": 147.2
+        },
+        {
+          "date": "2026-05-28",
+          "baseRate": 140,
+          "adjustments": [],
+          "bookedRate": 140
+        },
+        {
+          "date": "2026-05-29",
+          "baseRate": 145,
+          "adjustments": [],
+          "bookedRate": 145
+        },
+        {
+          "date": "2026-05-30",
+          "baseRate": 135,
+          "adjustments": [],
+          "bookedRate": 135
+        },
+        {
+          "date": "2026-05-31",
+          "baseRate": 136.72,
+          "adjustments": [],
+          "bookedRate": 136.72
         }
       ],
       "payout": {
@@ -1437,7 +2223,7 @@
         },
         {
           "description": "Cleaning Fee",
-          "amount": 140.0,
+          "amount": 140,
           "type": "fee"
         },
         {
@@ -1454,6 +2240,50 @@
           "description": "Travis County Venue Project Tax",
           "amount": 21.86,
           "type": "tax"
+        }
+      ],
+      "nightlyRates": [
+        {
+          "date": "2026-06-02",
+          "baseRate": 145,
+          "adjustments": [],
+          "bookedRate": 145
+        },
+        {
+          "date": "2026-06-03",
+          "baseRate": 135,
+          "adjustments": [],
+          "bookedRate": 135
+        },
+        {
+          "date": "2026-06-04",
+          "baseRate": 140,
+          "adjustments": [],
+          "bookedRate": 140
+        },
+        {
+          "date": "2026-06-05",
+          "baseRate": 135,
+          "adjustments": [],
+          "bookedRate": 135
+        },
+        {
+          "date": "2026-06-06",
+          "baseRate": 130,
+          "adjustments": [],
+          "bookedRate": 130
+        },
+        {
+          "date": "2026-06-07",
+          "baseRate": 135,
+          "adjustments": [],
+          "bookedRate": 135
+        },
+        {
+          "date": "2026-06-08",
+          "baseRate": 132.79,
+          "adjustments": [],
+          "bookedRate": 132.79
         }
       ],
       "payout": {
@@ -1530,7 +2360,7 @@
         },
         {
           "description": "Cleaning Fee",
-          "amount": 140.0,
+          "amount": 140,
           "type": "fee"
         },
         {
@@ -1547,6 +2377,26 @@
           "description": "Travis County Venue Project Tax",
           "amount": 11.03,
           "type": "tax"
+        }
+      ],
+      "nightlyRates": [
+        {
+          "date": "2026-06-28",
+          "baseRate": 145,
+          "adjustments": [],
+          "bookedRate": 145
+        },
+        {
+          "date": "2026-06-29",
+          "baseRate": 135,
+          "adjustments": [],
+          "bookedRate": 135
+        },
+        {
+          "date": "2026-06-30",
+          "baseRate": 131.41,
+          "adjustments": [],
+          "bookedRate": 131.41
         }
       ],
       "payout": {
@@ -1585,7 +2435,7 @@
         },
         {
           "description": "Cleaning Fee",
-          "amount": 140.0,
+          "amount": 140,
           "type": "fee"
         },
         {
@@ -1602,6 +2452,39 @@
           "description": "Travis County Venue Project Tax",
           "amount": 14.85,
           "type": "tax"
+        }
+      ],
+      "nightlyRates": [
+        {
+          "date": "2026-07-08",
+          "baseRate": 160,
+          "adjustments": [],
+          "bookedRate": 160
+        },
+        {
+          "date": "2026-07-09",
+          "baseRate": 150,
+          "adjustments": [],
+          "bookedRate": 150
+        },
+        {
+          "date": "2026-07-10",
+          "baseRate": 147.1,
+          "adjustments": [],
+          "bookedRate": 147.1
+        },
+        {
+          "date": "2026-07-11",
+          "baseRate": 165,
+          "adjustments": [
+            {
+              "type": "promotion",
+              "name": "Last-minute deal",
+              "percent": -12,
+              "amount": -19.8
+            }
+          ],
+          "bookedRate": 145.2
         }
       ],
       "payout": {
@@ -1640,7 +2523,7 @@
         },
         {
           "description": "Cleaning Fee",
-          "amount": 140.0,
+          "amount": 140,
           "type": "fee"
         },
         {
@@ -1657,6 +2540,50 @@
           "description": "Travis County Venue Project Tax",
           "amount": 21.91,
           "type": "tax"
+        }
+      ],
+      "nightlyRates": [
+        {
+          "date": "2026-07-12",
+          "baseRate": 145,
+          "adjustments": [],
+          "bookedRate": 145
+        },
+        {
+          "date": "2026-07-13",
+          "baseRate": 135,
+          "adjustments": [],
+          "bookedRate": 135
+        },
+        {
+          "date": "2026-07-14",
+          "baseRate": 140,
+          "adjustments": [],
+          "bookedRate": 140
+        },
+        {
+          "date": "2026-07-15",
+          "baseRate": 135,
+          "adjustments": [],
+          "bookedRate": 135
+        },
+        {
+          "date": "2026-07-16",
+          "baseRate": 130,
+          "adjustments": [],
+          "bookedRate": 130
+        },
+        {
+          "date": "2026-07-17",
+          "baseRate": 135,
+          "adjustments": [],
+          "bookedRate": 135
+        },
+        {
+          "date": "2026-07-18",
+          "baseRate": 135.44,
+          "adjustments": [],
+          "bookedRate": 135.44
         }
       ],
       "payout": {
@@ -1695,7 +2622,7 @@
         },
         {
           "description": "Cleaning Fee",
-          "amount": 140.0,
+          "amount": 140,
           "type": "fee"
         },
         {
@@ -1712,6 +2639,44 @@
           "description": "Travis County Venue Project Tax",
           "amount": 21.18,
           "type": "tax"
+        }
+      ],
+      "nightlyRates": [
+        {
+          "date": "2026-07-24",
+          "baseRate": 160,
+          "adjustments": [],
+          "bookedRate": 160
+        },
+        {
+          "date": "2026-07-25",
+          "baseRate": 155,
+          "adjustments": [],
+          "bookedRate": 155
+        },
+        {
+          "date": "2026-07-26",
+          "baseRate": 150,
+          "adjustments": [],
+          "bookedRate": 150
+        },
+        {
+          "date": "2026-07-27",
+          "baseRate": 145,
+          "adjustments": [],
+          "bookedRate": 145
+        },
+        {
+          "date": "2026-07-28",
+          "baseRate": 145,
+          "adjustments": [],
+          "bookedRate": 145
+        },
+        {
+          "date": "2026-07-29",
+          "baseRate": 163.99,
+          "adjustments": [],
+          "bookedRate": 163.99
         }
       ],
       "payout": {
@@ -1750,7 +2715,7 @@
         },
         {
           "description": "Cleaning Fee",
-          "amount": 140.0,
+          "amount": 140,
           "type": "fee"
         },
         {
@@ -1767,6 +2732,40 @@
           "description": "Travis County Venue Project Tax",
           "amount": 10.79,
           "type": "tax"
+        }
+      ],
+      "nightlyRates": [
+        {
+          "date": "2026-08-02",
+          "baseRate": 143.06,
+          "adjustments": [],
+          "bookedRate": 143.06
+        },
+        {
+          "date": "2026-08-03",
+          "baseRate": 145,
+          "adjustments": [
+            {
+              "type": "promotion",
+              "name": "Extended-stay discount",
+              "percent": -10,
+              "amount": -14.5
+            }
+          ],
+          "bookedRate": 130.5
+        },
+        {
+          "date": "2026-08-04",
+          "baseRate": 140,
+          "adjustments": [
+            {
+              "type": "promotion",
+              "name": "Extended-stay discount",
+              "percent": -10,
+              "amount": -14
+            }
+          ],
+          "bookedRate": 126
         }
       ],
       "payout": {
@@ -1805,7 +2804,7 @@
         },
         {
           "description": "Cleaning Fee",
-          "amount": 140.0,
+          "amount": 140,
           "type": "fee"
         },
         {
@@ -1822,6 +2821,32 @@
           "description": "Travis County Venue Project Tax",
           "amount": 12.45,
           "type": "tax"
+        }
+      ],
+      "nightlyRates": [
+        {
+          "date": "2026-08-05",
+          "baseRate": 125,
+          "adjustments": [],
+          "bookedRate": 125
+        },
+        {
+          "date": "2026-08-06",
+          "baseRate": 120,
+          "adjustments": [],
+          "bookedRate": 120
+        },
+        {
+          "date": "2026-08-07",
+          "baseRate": 125,
+          "adjustments": [],
+          "bookedRate": 125
+        },
+        {
+          "date": "2026-08-08",
+          "baseRate": 112.55,
+          "adjustments": [],
+          "bookedRate": 112.55
         }
       ],
       "payout": {
