@@ -35,6 +35,22 @@ export type Merchandising = {
   appliesTo: string[];
 };
 
+export type Guest = {
+  name: string;
+  email: string | null;
+  phone: string | null;
+};
+
+export type Stay = {
+  checkIn: string;
+  checkOut: string;
+  nights: number;
+  adults: number | null;
+  children: number | null;
+  infants: number | null;
+  pets: boolean | null;
+};
+
 export type Payout = {
   amount: number;
   managementFee: number;
@@ -47,19 +63,12 @@ export type Booking = {
   id: string;
   status: ReservationStatus;
   bookingSite: string | null;
-
-  guestName: string | null;
-
-  checkIn: string;
-  checkOut: string;
-  nights: number;
-
+  guest: Guest | null;
+  stay: Stay;
   dateBooked: string;
   lineItems: LineItem[];
-
   nightlyRates?: NightlyRate[];
   merchandising?: Merchandising[];
-
   payout: Payout | null;
   returningGuest: boolean;
 };
