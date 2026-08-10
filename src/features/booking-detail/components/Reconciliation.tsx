@@ -35,12 +35,14 @@ export function Reconciliation({ rows }: Props) {
                   : 'flex items-baseline justify-between gap-4 px-4 py-3 text-sm'
               }
             >
-              <div>
-                <dt className={isTotal ? 'font-medium text-slate-900' : 'text-slate-700'}>
-                  {row.label}
-                </dt>
-                {row.detail && <p className="mt-0.5 text-xs text-slate-500">{row.detail}</p>}
-              </div>
+              <dt className={isTotal ? 'font-medium text-slate-900' : 'text-slate-700'}>
+                {row.label}
+                {row.detail && (
+                  <span className="mt-0.5 block text-xs font-normal text-slate-500">
+                    {row.detail}
+                  </span>
+                )}
+              </dt>
               <dd
                 className={
                   isTotal
