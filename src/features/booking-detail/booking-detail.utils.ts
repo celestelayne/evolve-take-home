@@ -113,7 +113,6 @@ const getBookingOrientationProps = (booking: Booking, listing: Listing) => ({
 const getPayoutSummaryProps = (booking: Booking, owner: Owner) => ({
   status: getDisplayStatus(booking),
   amount: booking.payout?.amount ?? null,
-  managementFee: booking.payout?.managementFee ?? null,
   expectedDepositDate: booking.payout?.expectedDepositDate ?? null,
   depositedDate: booking.payout?.depositedDate ?? null,
   bankAccount: owner.bankAccount,
