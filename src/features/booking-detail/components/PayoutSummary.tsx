@@ -24,6 +24,9 @@ export function PayoutSummary({
 
   return (
     <section aria-labelledby={headingId}>
+      <h2 id={headingId} className="sr-only">
+        Payout
+      </h2>
 
       <div className="rounded-lg border border-slate-200 bg-white p-5">
         {amount === null ? (
