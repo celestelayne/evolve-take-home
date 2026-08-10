@@ -58,11 +58,17 @@ function PromotionDetail({ promo }: { promo: NightlyRatesPromotion }) {
       {expanded && (
         <div className="mt-3 space-y-2 text-sm">
           <table className="min-w-full tabular-nums">
+            <thead className="sr-only">
+              <tr>
+                <th scope="col">Night and listed rate</th>
+                <th scope="col">Reduction</th>
+              </tr>
+            </thead>
             <tbody>
               {promo.nights.map((night) => (
                 <tr key={night.date}>
                   <td className="py-1 text-slate-700">
-                    {formatDate(night.date)} · {Math.abs(night.percent)}% × {formatMoney(night.baseRate)}
+                    {formatDate(night.date)} · {Math.abs(night.percent)}% off {formatMoney(night.baseRate)}
                   </td>
                   <td className="py-1 text-right text-slate-700">
                     {formatMoney(night.amount)}

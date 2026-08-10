@@ -47,7 +47,8 @@ export function BookingReference({
           <div>
             <dt className="text-xs text-slate-500">Guest details</dt>
             <dd className="mt-0.5 text-slate-900">
-              {party && <span className="text-slate-500">{party}</span>}
+              {guest.name}
+              {party && <span className="text-slate-500"> · {party}</span>}
             </dd>
           </div>
         )}
