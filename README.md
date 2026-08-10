@@ -59,6 +59,13 @@ The full augmented booking is available in `src/data/payouts-dataset.json`.
 ## AI Workflow
 
 <!-- Add after completing the workflow. -->
+| Phase         | Human | AI    | Output|
+| :------------ | :---  | :---  | :---  |
+| 1. Understand | Read brief/data, identify core job, choose primary scenario | Audit brief + JSON in parallel for contradictions, gaps, assumptions, edge cases | Problem framing + assumptions/constraints 
+| 2. Prioritize | Rank goals and establish hierarchy | Challenge IA + progressive disclosure | Goals + IA + visibility rules 
+| 3. Explore | Evaluate alternatives and choose/synthesize | Generate approaches + scaffold 3–4 rough variants | Chosen product direction 
+| 4. Build | Direct implementation, inspect, adjust | Generate React/TS structure, components, states, data augmentation | Working deployed prototype
+| 5. Validate + Package | Smoke-test tasks, accessibility, responsive behavior; record decisions | Code review, edge-state audit, README/video-outline assistance | Repo + README + video walkthrough 
 
 ## Running Locally
 
