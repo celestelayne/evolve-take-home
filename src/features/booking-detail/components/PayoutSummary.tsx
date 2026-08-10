@@ -32,7 +32,7 @@ export function PayoutSummary({
           <div className="grid gap-6 sm:grid-cols-[1fr_2fr]">
             <div>
               <p className="text-xs font-medium uppercase tracking-wide text-slate-500">
-                Owner payout
+                Your payout
               </p>
               <p className="mt-2 text-4xl font-semibold tabular-nums text-slate-900 sm:text-5xl">
                 {formatMoney(amount)}
@@ -41,7 +41,7 @@ export function PayoutSummary({
 
             <dl className="divide-y divide-slate-200 text-sm">
               <div className="flex items-center justify-between gap-4 py-2 first:pt-0 last:pb-0">
-                <dt className="text-slate-500">Booking Status</dt>
+                <dt className="text-slate-500">Payout Status</dt>
                 <dd>
                   <StatusBadge status={status} />
                 </dd>
@@ -49,15 +49,15 @@ export function PayoutSummary({
 
               {depositedDate ? (
                 <div className="flex items-center justify-between gap-4 py-2 first:pt-0 last:pb-0">
-                  <dt className="text-slate-500">Deposited</dt>
-                  <dd className="tabular-nums text-slate-900">
+                  <dt className="font-medium text-slate-700">Deposited</dt>
+                  <dd className="text-base font-semibold tabular-nums text-slate-900">
                     {formatFullDate(depositedDate)}
                   </dd>
                 </div>
               ) : expectedDepositDate ? (
                 <div className="flex items-center justify-between gap-4 py-2 first:pt-0 last:pb-0">
-                  <dt className="text-slate-500">Expected deposit</dt>
-                  <dd className="tabular-nums text-slate-900">
+                  <dt className="font-medium text-slate-700">Expected deposit</dt>
+                  <dd className="text-base font-semibold tabular-nums text-slate-900">
                     {formatFullDate(expectedDepositDate)}
                   </dd>
                 </div>
