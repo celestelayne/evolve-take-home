@@ -1,8 +1,8 @@
 # Evolve Payout Detail Prototype
 
-| Key | Value |
+| Overview | Detail |
 | :---        | :---        |
-| Live Prototype | [URL]() |
+| Live Prototype | [evolve-take-home.vercel.app](https://evolve-take-home.vercel.app/) |
 | Stack | React + TypeScript + Vite + Tailwind, deployed to Vercel |
 | Scenario | Jordan Avery viewing an in-flight booking for South Congress Loft. |
 
@@ -61,6 +61,7 @@ The full augmented booking is available in `src/data/payouts-dataset.json`.
 <!-- Add after completing the workflow. -->
 
 ## Running Locally
+
 ```bash
 npm install
 npm run dev
@@ -72,16 +73,16 @@ business logic together while shared components and utilities remain reusable.
 
 ```markdown
 src/
-├── components/
+├── components/ <!-- Shared components go here -->
 ├── data/
 │   └── payouts-dataset.json
 ├── features/
 │   └── booking-detail/
-│       ├── components/
+│       ├── components/ <!-- Feature components go here -->
 │       ├── booking-detail.types.ts
 │       ├── booking-detail.utils.ts
 │       └── BookingDetail.tsx
-├── lib/
+├── lib/ <!-- Shared helpers go here -->
 ├── App.tsx
 └── index.css
 ```
