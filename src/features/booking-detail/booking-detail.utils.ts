@@ -82,24 +82,15 @@ const getReconciliationRows = (
       detail: 'Remitted directly to tax authorities',
     },
     {
-      label: 'Accomodation',
-      amount: getBaseTotal(booking),
-    },
-    {
-      label: 'Cleaning fee',
-      amount: getCleaningFee(booking),
-      detail: 'Passed through to owner',
-    },
-    {
       label: 'Owner earnings',
       amount: ownerEarnings,
       emphasis: 'total',
-      detail: 'Base rate and cleaning fee, before management fee',
+      detail: `Accommodation ${formatMoney(getBaseTotal(booking))} + cleaning fee ${formatMoney(getCleaningFee(booking))}, before management fee`,
     },
     {
       label: 'Evolve management fee',
       amount: -managementFee,
-      detail: `${feeRatePct}% of accomodation`,
+      detail: `${feeRatePct}% of accommodation`,
     },
     { label: 'Your payout', amount: netPayout, emphasis: 'total' },
   ];
